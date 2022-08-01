@@ -1,8 +1,8 @@
 <html>
 <style>
   body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -15,8 +15,15 @@
 </style>
 <head>
   <title>Heartmon</title>
+  <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
 </head>
 <body>
   <object type="image/svg+xml" data="heartbeat.svg"></object>
 </body>
+<footer>
+  <script>
+    const svg = document.querySelector('svg')
+    bodyScrollLock.disableBodyScroll(svg)
+  </script>
+</footer>
 </html>
