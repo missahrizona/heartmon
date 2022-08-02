@@ -6,24 +6,40 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+    background-color: #020A17;
   }
 
   object {
     width: 100vw;
     height: 85vh;
   }
+
+  .bpm-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .bpm {
+    font-size: 18px;
+    color: white;
+  }
 </style>
 <head>
   <title>Heartmon</title>
-  <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
 </head>
 <body>
-  <object type="image/svg+xml" data="heartbeat.svg"></object>
+  <object type="image/svg+xml" data="digital-heartbeat.svg"></object>
+  <div class="bpm-container">
+    <div class="bpm">1</div>
+  </div>
+
 </body>
-<footer>
-  <script>
-    const svg = document.querySelector('svg')
-    bodyScrollLock.disableBodyScroll(svg)
-  </script>
-</footer>
 </html>
